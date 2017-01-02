@@ -1,5 +1,3 @@
-
-
 /* Master Styles */
 h1 {
   color: #369;
@@ -11,8 +9,32 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
+
+
+#nav ul {
+    list-style-type: none;
+    background-color: #233237;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 0;
+}
+
+li {
+    display: inline-block;
+    width: 10%;
+    height: 25px;
+    margin-top: 12.5px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+li a:hover {
+  text-decoration: none;
+  color: #EAC67A;
 }
 
 .overlay {
@@ -60,6 +82,7 @@ body {
   right: 45px;
   font-size: 60px;
 }
+
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
