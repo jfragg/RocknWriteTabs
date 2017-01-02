@@ -1,0 +1,54 @@
+<form class="well" (ngSubmit)="addUser($event)">
+    <div class="form-group">
+        <input type="text" class="form-control"
+            name="fName" id="fName"
+            placeholder="First Name" [(ngModel)]="fName">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control"
+            name="lName" id="lName"
+            placeholder="Last Name" [(ngModel)]="lName">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control"
+            name="email" id="email"
+            placeholder="Email" [(ngModel)]="email">
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control"
+            name="uName" id="uName"
+            placeholder="Username" [(ngModel)]="uName">
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control"
+            name="password" id="password"
+            placeholder="Password" [(ngModel)]="password">
+    </div>
+
+    <div class="form-group">
+      <input type="password" class="form-control"
+             name="confpassword" id="confpassword"
+             placeholder="Confirm Password" [(ngModel)]="confpassword">
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<div *ngIf="invalid" class="alert alert-danger alert-dismissable">
+  <a class="close" data-dismiss="alert" aria-label="close" (click)="closeInvalid()">&times;</a>
+  <strong>Error!</strong> Username or email already taken.
+</div>
+
+<div *ngIf="incomplete" class="alert alert-danger alert-dismissable">
+  <a class="close" data-dismiss="alert" aria-label="close" (click)="closeIncomplete()">&times;</a>
+  <strong>Error!</strong> Some fields are missing; please fill out all fields.
+</div>
+
+<div *ngIf="dontmatch" class="alert alert-danger alert-dismissable">
+  <a class="close" data-dismiss="alert" aria-label="close" (click)="closeDontmatch()">&times;</a>
+  <strong>Error!</strong> Passwords do not match.
+</div>

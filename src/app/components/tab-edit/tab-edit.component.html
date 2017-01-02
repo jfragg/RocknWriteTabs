@@ -1,0 +1,36 @@
+<div class="container">
+  <!-- accept-charset=UTF-8 allows for unicode encoding to be allowed in this form -->
+  <form class="well" accept-charset="UTF-8">
+    <div style="width: 50%; float: left;">
+      <div class="form-group">
+        <label> Title: </label>
+        <input type="input" class="form-control"
+               placeholder="Enter Title Here!" [(ngModel)]="name"
+               name="name"/>
+      </div>
+      <div class="form-group">
+        <label> Artist: </label>
+        <input type="input" class="form-control"
+               placeholder="Enter Artist Here!" [(ngModel)]="artist"
+               name="artist"/>
+      </div>
+    </div>
+    <label style="margin-left: 10%;"> Privacy Type: </label>
+    <div style="float: right; width: 40%; margin-left: 10%;">
+      <div style="float: right; margin-right: 50%;">
+        <label>Private</label> <input type="radio" name="privacy" value="Private" [(ngModel)]="privacy">
+      </div>
+      <div style="float: left;">
+        <label>Public</label> <input type="radio" name="privacy" value="Public" [(ngModel)]="privacy">
+      </div>
+    </div>
+    <div class="form-group">
+            <textarea name="chordEdit" class="form-control"
+                      type="text" cols="8" rows="20"
+                      placeholder="Edit Chordpro Text Here"
+                      [(ngModel)]="chordEdit"> </textarea>
+    </div>
+    <button type="submit" class="btn btn-default" (click)="addTab($event)">Save</button>
+    <button type="button" class="btn btn-default" (click)="confirmClear()"> Clear </button>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<form class="well">
+    <div class="form-group">
+        <input type="text" class="form-control"
+            name="uName" id="uName"
+            placeholder="Username" [(ngModel)]="uName">
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control"
+            name="password" id="password"
+            placeholder="Password" [(ngModel)]="password">
+    </div>
+    <button type="button" class="btn btn-default" (click)="login()">Login</button>
+</form>
+
+<div *ngIf="wrongpass" class="alert alert-danger alert-dismissable">
+  <a class="close" data-dismiss="alert" aria-label="close" (click)="closeInvalid()">&times;</a>
+  <strong>Error!</strong> Username or password is incorrect.
+</div>

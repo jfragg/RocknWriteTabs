@@ -1,0 +1,38 @@
+{
+  "name": "jfragaki-lab5",
+  "version": "1.0.0",
+  "description": "jfragaki mean stack ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jfragaki@bitbucket.org/jfragaki/se3316a-lab5.git"
+  },
+  "author": "jonathan fragakis",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jfragaki/se3316a-lab5#readme",
+  "dependencies": {
+    "angular2-jwt": "^0.1.25",
+    "bcrypt": "^0.8.7",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.14.2",
+    "express-validator": "^2.21.0",
+    "lodash": "^4.17.2",
+    "method-override": "^2.3.6",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.6.8",
+    "node-restful": "^0.2.5",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0"
+  }
+}

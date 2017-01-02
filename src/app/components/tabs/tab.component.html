@@ -1,0 +1,23 @@
+<div class="container">
+  <div style="width: 50%; margin: 1% 5%;">
+    <h6> {{name}}</h6>
+    <h6> by {{artist}}</h6>
+    <h6> Author: {{author}}</h6>
+    <h6> Version: {{version}} </h6>
+    <h6> Last Updated: {{date}}</h6>
+    <div [innerHTML]="lyrics" name="lyrics"> </div>
+  </div>
+
+    <div id="ol" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+
+        <div class="overlay-content" style="width: 50%; margin: auto;">
+            <h4> {{title}}</h4>
+            <h6> {{artist}}</h6>
+            <p [innerHTML]="lyrics" name="lyrics" style="margin: auto;"></p>
+        </div>
+
+    </div>
+
+    <button style="margin: auto 5%" type="button" class="btn btn-default" (click)="openNav()"> Full Screen </button>
+</div>

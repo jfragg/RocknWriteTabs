@@ -1,0 +1,27 @@
+<div class="container">
+    <h1> Welcome to Guitar Tab Central! </h1>
+    <h4> About Us: </h4>
+    <p> Guitar Tab Central is a community where music lovers and guitar players meet. <br>
+        Take a look at the multitude of chord sheets submitted, create an account, and submit
+        one yourself!
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> Title: </th>
+                <th> Artist: </th>
+                <th> Version Number: </th>
+                <th> Last Updated: </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tab of tabs" >
+                <td><a [routerLink]="['/tabs', tab._id]"> {{tab.name}} </a></td>
+                <td> {{ tab.artist }}</td>
+                <td> {{ tab.versionNumber }} </td>
+                <td> {{ tab.revisionDate }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
